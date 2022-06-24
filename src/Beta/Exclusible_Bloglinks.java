@@ -232,12 +232,12 @@ public static void main(String[] args) throws Exception {
      
         
         
-        if (driver.getTitle().equals("Exclusible | Premium NFT platform for luxury digital collectible assets")) {
-            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Case Passed!\"}}");
-          }
-          else {
-            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \"Test Case failed\"}}");
-          }
+//        if (driver.getTitle().equals("Exclusible | Premium NFT platform for luxury digital collectible assets")) {
+//            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Case Passed!\"}}");
+//          }
+//          else {
+//            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \"Test Case failed\"}}");
+//          }
         
         
        
