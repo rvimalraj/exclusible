@@ -1,6 +1,5 @@
+
 package Beta;
-
-
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
@@ -25,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-
 @SuppressWarnings("unused")
 public class Featuredin_links {
 public static final String USERNAME = "vimalraj_1gakLz";
@@ -41,26 +39,12 @@ public static void main(String[] args) throws Exception {
 	caps.setCapability("browser_version", "latest");
 	caps.setCapability("project", "Exclusible");
 	caps.setCapability("build", "Win_Chrome");
-	caps.setCapability("name", "Exclusible_Featuredinlinks");
+	caps.setCapability("name", "FeaturedIn_links");
 	caps.setCapability("browserstack.local", "false");
 	caps.setCapability("browserstack.debug", "true");
 	caps.setCapability("browserstack.networkLogs", "true");
 	caps.setCapability("browserstack.selenium_version", "4.0.0");
 	caps.setCapability("browserstack.idleTimeout", "<30>");
-	
-	
-//	DesiredCapabilities caps = new DesiredCapabilities();
-//	caps.setCapability("os", "Windows");
-//	caps.setCapability("os_version", "11");
-//	caps.setCapability("browser", "Edge");
-//	caps.setCapability("browser_version", "latest-beta");
-//	caps.setCapability("project", "Exclusible");
-//	caps.setCapability("build", "Win_Edge");
-//	caps.setCapability("name", "Exclusible_Featuredinlinks");
-//	caps.setCapability("browserstack.local", "false");
-//	caps.setCapability("browserstack.networkLogs", "true");
-//	caps.setCapability("browserstack.selenium_version", "4.0.0");
-//	caps.setCapability("browserstack.idleTimeout", "<30>");
 
         WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
         
@@ -70,253 +54,168 @@ public static void main(String[] args) throws Exception {
         driver.manage().window().maximize();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement Element = driver.findElement(By.xpath("//h3[text()='Featured in']"));
-
-        //This will scroll the page till the element is found		
-        jse.executeScript("arguments[0].scrollIntoView();", Element);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
         Thread.sleep(3000);
         
-    	//fashion united
-		
-		  JavascriptExecutor js1d = (JavascriptExecutor) driver;
-			WebElement fashion = driver.findElement(By.xpath("(//img[@target='_blank'])[1]"));
-			js1d.executeScript("arguments[0].scrollIntoView();",fashion);
-			Thread.sleep(4000);
-		    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[1]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[1]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1b = driver.getWindowHandles();
-	        System.out.println(windowHandles1b);
-	        List<String> list = new ArrayList<String>(windowHandles1b);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	       
-
-
-//forbes
-		  
-		  JavascriptExecutor js1e = (JavascriptExecutor) driver;
-			WebElement forbes = driver.findElement(By.xpath("(//img[@target='_blank'])[2]"));
-			js1e.executeScript("arguments[0].scrollIntoView();",forbes);
-			Thread.sleep(4000);
-	        WebDriverWait wait1 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[2]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[2]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1c = driver.getWindowHandles();
-	        System.out.println(windowHandles1c);
-	        List<String> list1 = new ArrayList<String>(windowHandles1c);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	     
-
-	  //vogue
-		  
-		  JavascriptExecutor js1f = (JavascriptExecutor) driver;
-			WebElement vogue = driver.findElement(By.xpath("(//img[@target='_blank'])[3]"));
-			js1f.executeScript("arguments[0].scrollIntoView();",vogue);
-			Thread.sleep(4000);
-		    WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[3]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[3]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1d = driver.getWindowHandles();
-	        System.out.println(windowHandles1d);
-	        List<String> list2 = new ArrayList<String>(windowHandles1d);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	   
-
-//coin news
-		  
-		  JavascriptExecutor js1g = (JavascriptExecutor) driver;
-			WebElement coin = driver.findElement(By.xpath("(//img[@target='_blank'])[4]"));
-			js1g.executeScript("arguments[0].scrollIntoView();",coin);
-			Thread.sleep(4000);
-			WebDriverWait wait3 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[4]")));	
-			driver.findElement(By.xpath("(//img[@target='_blank'])[4]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1e = driver.getWindowHandles();
-	        System.out.println(windowHandles1e);
-	        List<String> list3 = new ArrayList<String>(windowHandles1e);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-
-
-//crypto news
-		  
-		    JavascriptExecutor js1h = (JavascriptExecutor) driver;
-			WebElement crypto = driver.findElement(By.xpath("(//img[@target='_blank'])[5]"));
-			js1h.executeScript("arguments[0].scrollIntoView();",crypto);
-			Thread.sleep(4000);
-			 WebDriverWait wait4 = new WebDriverWait(driver,Duration.ofSeconds(20));
-			 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[5]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[5]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1f = driver.getWindowHandles();
-	        System.out.println(windowHandles1f);
-	        List<String> list4 = new ArrayList<String>(windowHandles1f);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	       
         
+        driver.findElement(By.xpath("(//img[@target='_blank'])[1]")).click();// Fashion United Link
+        Thread.sleep(5000);
+        Set<String> windowHandles1 = driver.getWindowHandles();
+        System.out.println(windowHandles1);
+        List<String> list1 = new ArrayList<String>(windowHandles1);
+        driver.switchTo().window(list1.get(1));
+        driver.close();
+        driver.switchTo().window(list1.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(3000);
+        
+        driver.findElement(By.xpath("(//img[@target='_blank'])[2]")).click();// Forbes Link
+        Thread.sleep(5000);
+        Set<String> windowHandles2 = driver.getWindowHandles();
+        System.out.println(windowHandles2);
+        List<String> list2 = new ArrayList<String>(windowHandles2);
+        driver.switchTo().window(list2.get(1));
+        driver.close();
+        driver.switchTo().window(list2.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(3000);
+       
+        
+        driver.findElement(By.xpath("(//img[@target='_blank'])[3]")).click();// Vougue Business
+        Thread.sleep(7000);
+        Set<String> windowHandles3 = driver.getWindowHandles();
+        System.out.println(windowHandles3);
+        List<String> list3 = new ArrayList<String>(windowHandles3);
+        driver.switchTo().window(list3.get(1));
+        driver.close();
+        driver.switchTo().window(list3.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(3000);
+        
+        driver.findElement(By.xpath("(//img[@target='_blank'])[4]")).click();// Coin News Link
+        Thread.sleep(7000);
+        Set<String> windowHandles4 = driver.getWindowHandles();
+        System.out.println(windowHandles4);
+        List<String> list4 = new ArrayList<String>(windowHandles4);
+        driver.switchTo().window(list4.get(1));
+        driver.close();
+        driver.switchTo().window(list4.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(3000);
 
-		  //glossy
-		  
-		    JavascriptExecutor js1i = (JavascriptExecutor) driver;
-			WebElement glossy = driver.findElement(By.xpath("(//img[@target='_blank'])[6]"));
-			js1i.executeScript("arguments[0].scrollIntoView();",glossy);
-			Thread.sleep(4000);
-		    WebDriverWait wait5 = new WebDriverWait(driver,Duration.ofSeconds(20));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[6]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[6]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1h = driver.getWindowHandles();
-	        System.out.println(windowHandles1h);
-	        List<String> list5 = new ArrayList<String>(windowHandles1h);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	        
+        
+       
+        
+        driver.findElement(By.xpath("(//img[@target='_blank'])[5]")).click();// Crypto News Link
+        Thread.sleep(7000);
+        Set<String> windowHandles5 = driver.getWindowHandles();
+        System.out.println(windowHandles5);
+        List<String> list5 = new ArrayList<String>(windowHandles5);
+        driver.switchTo().window(list5.get(1));
+        driver.close();
+        driver.switchTo().window(list5.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(3000);
+        
+        driver.findElement(By.xpath("(//img[@target='_blank'])[6]")).click();// Glossy Link
+        Thread.sleep(7000);
+        Set<String> windowHandles6 = driver.getWindowHandles();
+        System.out.println(windowHandles6);
+        List<String> list6 = new ArrayList<String>(windowHandles6);
+        driver.switchTo().window(list6.get(1));
+        driver.close();
+        driver.switchTo().window(list6.get(0));
+        Thread.sleep(4000);
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+        Thread.sleep(9000);
+        
+        
+      driver.findElement(By.xpath("(//img[@target='_blank'])[7]")).click();// Journal Du Coin
+      
+      Thread.sleep(9000);
+      Set<String> windowHandles7 = driver.getWindowHandles();
+      System.out.println(windowHandles7);
+      List<String> list7 = new ArrayList<String>(windowHandles7);
+      driver.switchTo().window(list7.get(1));
+      driver.close();
+      driver.switchTo().window(list7.get(0));
+      Thread.sleep(4000);
+      jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+      Thread.sleep(9000);
+      
+      
+      driver.findElement(By.xpath("(//img[@target='_blank'])[8]")).click();// New York Post Link
+      Thread.sleep(7000);
+      Set<String> windowHandles8 = driver.getWindowHandles();
+      System.out.println(windowHandles8);
+      List<String> list8 = new ArrayList<String>(windowHandles8);
+      driver.switchTo().window(list8.get(1));
+      driver.close();
+      driver.switchTo().window(list8.get(0));
+      Thread.sleep(4000);
+      jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+      Thread.sleep(9000);
+      
+      driver.findElement(By.xpath("(//img[@target='_blank'])[9]")).click();// NFT Evening
+      Thread.sleep(7000);
+      Set<String> windowHandles9 = driver.getWindowHandles();
+      System.out.println(windowHandles9);
+      List<String> list9 = new ArrayList<String>(windowHandles9);
+      driver.switchTo().window(list9.get(1));
+      driver.close();
+      driver.switchTo().window(list9.get(0));
+      Thread.sleep(4000);
+      jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+      Thread.sleep(9000);
+      
+      driver.findElement(By.xpath("(//img[@target='_blank'])[10]")).click();// Vougue Business
+      Set<String> windowHandles10 = driver.getWindowHandles();
+      System.out.println(windowHandles10);
+      List<String> list10 = new ArrayList<String>(windowHandles10);
+      driver.switchTo().window(list10.get(1));
+      driver.close();
+      driver.switchTo().window(list10.get(0));
+      Thread.sleep(4000);
+      jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+      Thread.sleep(9000);
+        
+      
+      driver.findElement(By.xpath("(//img[@target='_blank'])[11]")).click();// Jing Daily
+      Thread.sleep(7000);
+      Set<String> windowHandles11 = driver.getWindowHandles();
+      System.out.println(windowHandles11);
+      List<String> list11 = new ArrayList<String>(windowHandles11);
+      driver.switchTo().window(list11.get(1));
+      driver.close();
+      driver.switchTo().window(list11.get(0));
+      Thread.sleep(4000);
+      jse.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+      Thread.sleep(9000);
+      
+      
 
-//journal d coin
-		  
-		  JavascriptExecutor js1j = (JavascriptExecutor) driver;
-			WebElement journal = driver.findElement(By.xpath("(//img[@target='_blank'])[7]"));
-			js1j.executeScript("arguments[0].scrollIntoView();",journal);
-			Thread.sleep(4000);
-	        WebDriverWait wait6 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[7]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[7]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1i = driver.getWindowHandles();
-	        System.out.println(windowHandles1i);
-	        List<String> list6 = new ArrayList<String>(windowHandles1i);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	        
+        System.out.println("Page title is : " + driver.getTitle());
+        if (driver.getTitle().equals("Exclusible | Premium NFT platform for luxury digital collectible assets")) {
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Case Passed!\"}}");
+          }
+          else {
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \"Test Case failed\"}}");
+          }
+      
+       
+     
 
-//new york post
-		
-		  JavascriptExecutor js1k = (JavascriptExecutor) driver;
-			WebElement post = driver.findElement(By.xpath("(//img[@target='_blank'])[8]"));
-			js1k.executeScript("arguments[0].scrollIntoView();",post);
-			Thread.sleep(4000);
-	        WebDriverWait wait7 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[8]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[8]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1j = driver.getWindowHandles();
-	        System.out.println(windowHandles1j);
-	        List<String> list7 = new ArrayList<String>(windowHandles1j);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	      
-
-//nft evening
-	        
-		  JavascriptExecutor js1l = (JavascriptExecutor) driver;
-			WebElement nft = driver.findElement(By.xpath("(//img[@target='_blank'])[9]"));
-			js1l.executeScript("arguments[0].scrollIntoView();",nft);
-			Thread.sleep(4000);
-         WebDriverWait wait8 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[9]")));	        
-			driver.findElement(By.xpath("(//img[@target='_blank'])[9]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1k = driver.getWindowHandles();
-	        System.out.println(windowHandles1k);
-	        List<String> list8 = new ArrayList<String>(windowHandles1k);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	     
-
-//vogue business
-		  
-		  JavascriptExecutor js1m = (JavascriptExecutor) driver;
-			WebElement business = driver.findElement(By.xpath("(//img[@target='_blank'])[10]"));
-			js1m.executeScript("arguments[0].scrollIntoView();",business);
-			Thread.sleep(4000);
-	        WebDriverWait wait9 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[10]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[10]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1l = driver.getWindowHandles();
-	        System.out.println(windowHandles1l);
-	        List<String> list9 = new ArrayList<String>(windowHandles1l);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	      
-//jing daily
-		  
-		  JavascriptExecutor js1n = (JavascriptExecutor) driver;
-			WebElement daily = driver.findElement(By.xpath("(//img[@target='_blank'])[11]"));
-			js1n.executeScript("arguments[0].scrollIntoView();",daily);
-			Thread.sleep(4000);
-	        WebDriverWait wait10 = new WebDriverWait(driver,Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@target='_blank'])[11]")));
-			driver.findElement(By.xpath("(//img[@target='_blank'])[11]")).click();
-			Thread.sleep(4000);
-		    Set<String> windowHandles1n = driver.getWindowHandles();
-	        System.out.println(windowHandles1n);
-	        List<String> list10 = new ArrayList<String>(windowHandles1n);
-		    driver.switchTo().window(list.get(1));
-		    System.out.println(driver.getCurrentUrl());
-		    Thread.sleep(5000);
-	        driver.close();
-	        driver.switchTo().window(list.get(0));
-	        Thread.sleep(4000);
-	        System.out.println(driver.getCurrentUrl());		
-	        driver.quit();
+        Thread.sleep(3000);
+      
+       
+       
+       
+        driver.quit();
 }
 }
+

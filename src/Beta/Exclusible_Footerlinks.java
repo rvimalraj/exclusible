@@ -151,7 +151,10 @@ public static void main(String[] args) throws Exception {
        WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
         
        JavascriptExecutor jse = (JavascriptExecutor) driver;
-       
+       driver.get("http://beta.exclusible.xyz"); // Launching Website
+       Thread.sleep(3000);
+       driver.manage().window().maximize();
+       Thread.sleep(3000);
 
         
 	//footer link contact us 
